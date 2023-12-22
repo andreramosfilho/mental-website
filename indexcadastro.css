@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=sw
+ ap');
+ * {
+        margin: 0;
+        padding:0;
+        border: 0;
+        box-sizing:border-box;
+        font-family: "Poppins", sans-serif;
+        font-weight: bolder;
+    }
+
+    body {
+        /* background-color: #1B2029; */
+        background-color: #000d1e;
+        /* color: white; */
+        color: #55ebff;
+        font-weight: 500;
+        display: flex;
+        min-height: 100vh;
+    }
+
+    main {
+        width: 50vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    main h1 {
+        color: #55ebff;
+        font-size: 3rem;
+        margin-bottom: 3rem;
+        font-weight: bolder;
+    }
+
+    main .social-media {
+        display: flex;
+        CSS – CADASTRO align-content:center;
+    }
+
+    main .social-media a {
+        text-decoration: none;
+    }
+
+    main .social-media img {
+        width: 36px;
+        margin-left: 3rem;
+    }
+
+    main .social-media a:first-child img {
+        margin-left: 0;
+    }
+
+    main .alternative {
+        margin-top: 1rem;
+    }
+
+    main.alternative span {
+        font-size: 1.1rem;
+        font-weight: 400;
+        position: relative;
+    }
+
+    /* main .alternative span::before, main .alternative span::after{
+position: absolute;
+content: '';
+height: 1px;
+width: 100px;
+bottom: 50%;
+right: 50px;
+background:#ffffff ;
+}
+main.alternative span::after {
+left: 50px;
+} */
+    main form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main form label {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main form label span {
+        font-size: 1.1rem;
+        margin-top: 2rem;
+    }
+
+    main form input {
+        /* background: #161923; */
+        /* background:#55ebff; */
+        background:white;
+        width: 300px;
+        height: 50px;
+        padding: 0 0.5rem;
+        margin-top: 1rem;
+        outline: none;
+        color: rgb(0, 0, 0);
+        font-size: 1rem;
+        border: 1px solid #040B18;
+        border-radius: 8px;
+    }
+
+    main form input[type="submit"] {
+        cursor: pointer;
+        width: 50%;
+        margin-top: 4rem;
+        border: none;
+        border-radius: 32px;
+        background: #55ebff;
+        color: rgba(0, 5, 34, 0.993);
+        font-size: 1.1rem;
+        transition: all .3s ease-in-out;
+    }
+
+    main form input[type="submit"]:hover {
+        background: #006c7a;
+    }
+
+    section.images {
+        display: flex;
+
+        <?php if ($_SERVER["REQUEST_METHOD"]=="POST") {
+            $nome =$_POST["nome"];
+            $email =$_POST["email"];
+            $idade =$_POST["idade"];
+            $telefone =$_POST["telefone"];
+            $endereco =$_POST["endereco"];
+            $cidade =$_POST["cidade"];
+            // Exibindo os dados cadastrados
+            echo "<h1>Dados Cadastrados</h1>";
+            echo "<p><strong>Nome:</strong> $nome</p>";
+            echo "<p><strong>Email:</strong> $email</p>";
+            echo "<p><strong>Idade:</strong> $idade</p>";
+            echo "<p><strong>Telefone:</strong> $telefone</p>";
+            echo "<p><strong>Endereço:</strong> $endereco</p>";
+            echo "<p><strong>Cidade:</strong> $cidade</p>";
+        }
+
+        else {
+            header("Location: index.html");
+        }
+
+        ?>
